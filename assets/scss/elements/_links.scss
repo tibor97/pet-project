@@ -1,0 +1,36 @@
+a{
+	text-decoration: none;
+	color:$black;
+}
+
+.shopping-cart-link{
+  	padding: 25px 0px 10px 0px;
+	margin-right: 40px;
+
+	@include max-mq($lg){
+    	margin-right: 35px;
+    }
+
+    @include max-mq($tb){
+    	padding: 19px 0 15px 0;
+    	margin-right: 23px;
+    }
+}
+
+.hero-section-link-green, .hero-section-link-blue, .hero-section-link-orange{
+	&:hover{
+		text-decoration: underline;
+	}
+}
+
+.hero-section-link-green{
+	color: $primary-color100;
+}
+
+.hero-section-link-blue{
+	color: $secondary-color300;
+}
+
+.hero-section-link-orange{
+	color: $tertiary-color100;
+}

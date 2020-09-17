@@ -1,0 +1,141 @@
+.contact-section {
+	background: $quarterly-color400;
+	padding: 138px 0;
+
+	@include max-mq($md){
+		padding: 47px 0 72px 0;
+	}
+
+	@include max-mq($tb){
+		padding: 40px 0 57px 0;
+	}
+}
+
+.contact-section-wrapper{
+	position:relative;
+}
+
+.contact-section-left {
+	width: 50%;
+	//position: relative;
+
+	@include max-mq($tb){
+		width: 100%;
+	}
+}
+
+.contact-section-left-wrapper {
+    position: absolute;
+   	top: 50%;
+   	left: 0;
+   	transform: translate(0,-50%);
+   	width: 50%;
+   	max-width: 587px;
+
+	@include max-mq($tb){
+		position: relative;
+		transform: translate(0, 0);
+		top: 0%;
+		margin:30px auto;
+		width: 65%;
+	}
+
+	.contact-section-left-inner-wrapper {
+		position: relative;
+		width: 100%;
+
+		@include max-mq($tb){
+			transform: translateX(7px);
+		}
+		
+		&:before {
+			content: '';
+			display: block;
+		    padding-top: 83%;
+		}
+	}
+
+	.contact-image-top {
+		@include contact-section-images(-top, 47%, 103%);
+		top:1.5%;
+		left:9.5%;
+	}
+
+	.contact-image-right {
+		@include contact-section-images(-right, 50%, 112%);
+		top: 16%;
+	   	right: 13%;
+	   	z-index: -1;
+
+	   	@include max-mq($md){
+			right: 17%;
+		}
+	}
+
+	.contact-image-bottom {
+		@include contact-section-images(-bottom, 28%, 104%);
+		bottom: 0;
+	  	left: 23%;
+
+	   	@include max-mq($md){
+			bottom: 3%;
+		}
+	}
+}
+
+
+
+					
+.contact-section-right{
+	width: 50%;
+
+	@include max-mq($md){
+		width:40%;
+	}
+
+	@include max-mq(700px){
+		width:48%;
+	}
+
+	@include max-mq($tb){
+		width: 100%;
+	}
+
+	form{
+		max-width: 414px;
+		width: 80%;
+		margin: 47px auto 0 auto;
+		font-family: $secondary-font;
+
+		@include max-mq($md){
+			width: 100%;
+			margin: 47px auto 0 auto;
+		}
+
+		@include max-mq($tb){
+			width: 97%;
+			margin: 29px auto 0 auto;
+		}
+	}
+
+	input{
+		margin-bottom: 15px;
+	}
+
+	textarea{
+		margin-bottom: 30px;
+		resize: none;
+		height: 130px;
+	}
+
+	input, textarea{
+		display: inline-block;
+		width: 100%;
+		padding: 18px 17px;
+    	letter-spacing: -1px;
+    	border-width: 1px;
+    	border-style: solid;
+    	border-radius: 5px;
+	}
+}
+

@@ -1,0 +1,199 @@
+header{
+	position: absolute;
+ 	width: 100%;
+ 	z-index: 99;
+ 	padding-bottom:10px;
+ 	position: fixed;
+ 	filter: drop-shadow(2.5px 4.33px 7px rgba(0,0,0,0.18));
+}
+
+.main-header-wrapper{
+	display:flex;
+	justify-content: space-between;
+	margin-top:25px;
+	align-items:center;
+	font-family: $secondary-font;
+	font-weight: bold;
+
+	@include max-mq($lg){
+		margin-top: 31px;
+	}
+
+	@include max-mq($tb){
+		margin-top: 14px;
+	}
+}
+
+
+.logo-wrapper{
+
+	a{
+		display: flex;
+		align-items:center;
+	}
+
+	img{
+		margin-right: 10px;
+	}
+
+	p{
+		font-family: $primary-font;
+		font-weight: bold;
+		font-size: 18px;
+		padding-top: 11px;
+
+		@include max-mq($tb){
+			font-size: 12px;
+    		padding-top: 11px;
+		}  
+	}
+}
+
+.main-logo-wrapper{
+	padding-left: 15px;
+	z-index: 2;
+
+	@include max-mq($lg){
+		padding-left:5px;
+	}
+
+	@include max-mq($tb){
+		padding-left:1px;
+	}
+}
+
+.main-logo{
+	margin-right:10px;
+
+	@include max-mq($tb){
+		margin-right: 8px;
+    	width: 45px;
+    	height: 45px;
+	}
+}
+
+.logo-color-white{
+	fill:$white;
+}
+
+.navbar{
+	@include min-mq($lg){
+		transform: translateX(-12px);
+	}
+
+	@include max-mq($sm){
+		display:none;
+	}
+}
+
+.navbar-list{
+	display:flex;
+
+	@include max-mq($sm){
+		padding-top: 90px;
+		display: block;
+    	position: absolute;
+    	top: 0;
+    	width: 100%;
+    	height: 100vh;
+    	background-color: $navbar-background;
+    	left: 0;
+    	text-align: center;
+    	z-index: 1;
+    	padding-top: 122px;
+
+    	a{
+    		color: $white;
+
+    		@include max-mq($sm){
+				font-size: 25px;
+			}
+    	}
+	}
+}
+
+.navbar-list-item{
+	list-style-type: none;
+	padding: 20px 16px 10px 16px;
+	position: relative;
+
+	@include max-mq($lg){
+		font-size: 14px;
+		padding: 20px 17px 10px 5px;
+	}
+
+	@include max-mq($sm){
+		padding: 20px 17px 13px 17px;
+	}
+
+	&::before{
+		content: "";
+		position: absolute;
+		bottom:0;
+		left:0;
+		width:0%;
+		height:2px;
+		background-color: $black;
+		transition: .3s ease-in-out;
+
+		@include max-mq($sm){
+			display: none;
+		}
+	}
+
+	&:hover{
+		
+		&::before {
+            width: 100%;
+        }
+	}
+}
+
+.cart-log-wrapper{
+	display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    @include max-mq($lg){
+    	padding-right: 10px;
+    }
+
+    @include max-mq($tb){
+    	padding-right: 3px;
+    }
+
+    .icon-menu{
+    	margin-left: 30px;
+
+    	@include max-mq($tb){
+    		margin-left: 20px;
+    	}
+
+    	img{
+    		padding-top: 20px;
+
+    		@include max-mq($tb){
+    			padding-top: 11px;
+    			
+    		}
+    	}
+    }
+}
+
+
+.icon-menu{
+	z-index: 3;
+
+	@include min-mq($sm){
+		display:none;
+	}
+}
+
+.logo-name-white{
+	color: $white;
+}
+
+
+
+
+

@@ -1,0 +1,135 @@
+.product-section{
+	margin: 37px 0;
+
+	// @include max-mq($max-tablet){
+ //    	margin: 5px 0 37px 0;
+ //    }
+}
+
+.product-slider-wrapper{
+	margin: 70px 0 50px 0;
+	position: relative;
+    width: 100%;
+
+    // @include max-mq($md){
+    // 	margin: 60px 0 50px 0;
+    // }
+
+    // @include max-mq($tb){
+    // 	margin: 42px 0 50px 0;
+    // }
+}
+
+.product-slider{
+	width: 90%;
+	max-width: 964px;
+	margin: 0 auto;
+	overflow: hidden;
+
+	// @include max-mq(1150px){
+	// 	width: 87%;
+	// }
+
+	// @include min-max-mq($tb, 767px){
+	// 	width: 83%;
+	// }
+
+	// @include max-mq($tb){
+	// 	overflow: visible;
+	// }
+}
+
+.product-slider-item{
+	margin-right: 15px;
+
+	.img-wrapper{
+		width: 100%;
+
+		&::before {
+        	content: '';
+        	display: block;
+        	padding-top: 102%;
+        }
+	}
+
+	.item-1-bg{
+		background: url(../images/product-slider-1.png) no-repeat;
+		background-color: red;
+		background-position: 60% 100%;
+
+		// @include max-mq($lg){
+		// 	background-size:contain;
+		// }
+	}
+
+	.item-2-bg{
+		background: url(../images/product-slider-2.png) no-repeat;
+		background-color: blue;
+		background-position: 60% 70%;
+
+		// @include max-mq($lg){
+		// 	background-size:contain;
+		// }
+	}
+
+	.item-3-bg{
+		background: url(../images/product-slider-3.png) no-repeat;
+		background-color: red;
+		background-position: 60% 80%;
+
+		// @include max-mq($lg){
+		// 	background-size:contain;
+		// }
+	}
+
+	.item-4-bg{
+		background: url(../images/product-slider-4.png) no-repeat;
+		background-color: red;
+		background-position: 50% 80%;
+
+		// @include max-mq($lg){
+		// 	background-size:contain;
+		// }
+	}
+
+	.item-5-bg{
+		background: url(../images/product-slider-5.png) no-repeat;
+		background-color: red;
+		background-position: 70% 70%;
+
+		// @include max-mq($lg){
+		// 	background-size:contain;
+		// }
+	}
+
+	.content-wrapper{
+		padding: 13px 20px;
+    	font-size: 14px;
+
+    	// @include max-mq(860px){
+    	// 	padding: 10px 7px;
+    	// 	font-size: 12px;
+    	// 	line-height: 14px;
+    	// }
+
+    	p{
+			// font-family: $primary-font;
+			font-weight:bold;
+			text-align: center;
+		}
+
+    	p:first-child{
+    		padding-bottom: 7px;
+    	}
+	}
+	
+	.content-color{
+		// color: $tertiary-color100;
+	}
+}
+
+.slick-track{
+	display: flex;
+}
+
+

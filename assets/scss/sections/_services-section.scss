@@ -1,0 +1,221 @@
+.services-section{
+	margin-top:75px;
+
+	@include max-mq(768px){
+		margin-top: 70px;
+	}
+
+	@include max-mq($tb){
+		margin-top: 34px;
+	}
+}
+
+.services-section-wrapper{
+	padding: 70px 0;
+
+	@include max-mq(768px){
+		padding: 47px 0 20px 0;
+	}
+}
+
+.services-section-wrapper-left, .services-section-wrapper-right{
+	width:50%;
+
+	@include max-mq(768px){
+		width: 100%;
+	}
+}
+
+.services-section-wrapper-left{
+	.service-option-wrapper{
+		width:70%;
+		margin: 0 auto;
+		padding: 18px 17px;
+		cursor: pointer;
+		transition: .1s;
+
+		@include max-mq(768px){
+			width: 86%;
+		}
+
+		@include max-mq($tb){
+			width: 96%;
+		}
+
+		&:hover{
+			background-color: $services-active-state;
+		}
+
+		&.active-background-color{
+			background-color: $services-active-state;
+		}
+	}
+
+	.service-option-heading{
+		position:relative;
+		display: flex;
+		align-items: center;
+
+		&::before{
+			content: "";
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			margin-right: 14px;
+		}
+	}
+
+	.option-heading-1{
+		&::before{
+			background: url(../icons/scissors.svg) 0 0 repeat;
+		}
+	}
+
+	.option-heading-2{
+		&::before{
+			background: url(../icons/hospital.svg) 0 0 repeat;
+		}
+	}
+		
+	.option-heading-3{
+		&::before{
+			background: url(../icons/walking-the-dog.svg) 0 0 repeat;
+		}
+	}
+
+	.option-heading-4{
+		&::before{
+			background: url(../icons/dog-training.svg) 0 0 repeat;
+		}
+	}
+
+	.option-heading-arrow{
+		position: absolute;
+		right:0;
+		top:50%;
+		transform: translate(0, -50%); 
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		background: url(../icons/down-arrow.svg) 0 0 no-repeat;
+		background-position: center center;
+		transition: 0.5s;
+
+		@include max-mq($tb){
+			right:-9px;
+		}
+	}
+
+	.option-content{
+		p{
+			font-family: $secondary-font;
+			padding: 7px 35px 0 35px;
+			line-height: 20px;
+			font-size: 12px;
+
+			@include max-mq(768px){
+				padding: 7px 55px 0 3px;
+			}
+
+			@include max-mq($tb){
+				padding: 9px 41px 0 3px;
+				line-height: 18px;
+			}
+		}
+	}
+
+	.is-hidden { 
+		display: none;
+	}
+
+	.is-active{
+		margin-bottom:10px;
+
+		@include max-mq($tb){
+			margin-bottom:6px;
+		}
+		.option-heading-arrow{
+			right: 1px;
+	    	top: 3px;
+			transform: rotate(180deg);
+
+			@include max-mq($tb){
+				right:-6px;
+			}
+		}
+	} 
+}
+
+.services-section-wrapper-right{
+	@include max-mq(768px){
+		margin-top: 40px;
+	}
+
+	ul{
+		font-family: $primary-font;
+		font-size: 14px;
+		list-style-type: none;
+	}
+
+	li{
+		&:first-child{
+			font-weight: bold;
+		    text-align: left;
+		    letter-spacing: 2px;
+		    font-family: $secondary-font;
+		    padding: 0px 0 30px 38px;
+		    line-height: 12px;
+		    color:$quarterly-color300;
+
+		    @include max-mq(768px){
+		    	text-align: center;
+		    	padding: 0px 0 41px 0px;
+		    }
+
+		    @include max-mq($tb){
+		    	padding: 0px 0 20px 0px;
+		    }
+		}
+
+		&:not(:first-child){
+			display: flex;
+			align-items:center;
+			padding-left: 10px;
+	   		margin-bottom: 20px;
+
+	   		@include max-mq(768px){
+		    	justify-content:center;
+		    	padding-left: 0px;
+		    	transform: translateX(-13px);
+		    }
+
+		    @include max-mq($tb){
+		    	flex-direction:column;
+		    	transform: translateX(0px);
+		    	width: 100%;
+    			max-width: 230px;
+    			text-align: center;
+    			margin: 0 auto;
+    			font-size: 12px;
+    			padding-bottom: 19px;
+		    }
+
+	   		&::before{
+				content: '';
+				display: inline-block;
+				height: 16px;
+				width: 16px;
+				background-image: url(../icons/animal-paw-print.svg);
+				background-size: 16px 16px;
+				background-repeat: no-repeat;
+				padding-right: 10px;
+
+				@include max-mq($tb){
+			    	padding-right: 0px;
+			    	padding-bottom: 10px;
+		    	}
+			}
+		}
+	}
+}
+

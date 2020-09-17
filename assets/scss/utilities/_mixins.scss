@@ -1,0 +1,38 @@
+@mixin contact-section-images($image-name, $width, $padding-top){
+	background: url("../images/contact-image"+$image-name+".png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	width: $width;
+	border-radius: 20px;
+	position: absolute;
+	filter: drop-shadow(2.5px 4.33px 7px rgba(0,0,0,0.18));
+  
+  @include max-mq($tb){
+    border-radius: 10px;
+  }
+
+	&::before {
+       	content: '';
+       	display: block;
+       	padding-top: $padding-top;
+    }
+}
+
+@mixin min-mq($var){
+  @media (min-width: #{$var}){
+    @content;
+  }
+}
+  
+@mixin max-mq($var){
+  @media (max-width: #{$var}){
+    @content;
+  }
+}
+  
+@mixin min-max-mq($min, $max){
+  @media (min-width: #{$min}) and (max-width: #{$max}){
+    @content;
+  }
+}

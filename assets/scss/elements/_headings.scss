@@ -1,0 +1,106 @@
+h1{ //main-title
+	font-family: $primary-font;
+	font-weight: bold;
+	line-height: 52px;
+	font-size: 40px;
+
+	@include max-mq($tb){
+		line-height: 45px;
+    	font-size: 28px;
+	}
+}
+
+h2{ //section title
+	font-family: $primary-font;
+	font-weight: bold;
+	font-size: 34px;
+	line-height: 42px;
+	text-align: center;
+	margin-bottom: 16px;
+
+	@include max-mq($lg){
+		font-size: 28px;
+    	width: 60%;
+    	margin: 0px auto;
+	}
+
+	@include max-mq($tb){
+		font-size: 18px;
+		line-height:25px;
+	}
+}
+
+.about-heading{
+	max-width: 500px;
+	width: 100%;
+	margin:0 auto;
+
+	@include max-mq($lg){
+		max-width: 470px;
+	}
+
+	@include max-mq($tb){
+		max-width: 250px;
+	}
+}
+
+.h2-margin-bottom{
+	margin-bottom: 9px;
+}
+
+.supertitle{
+	display:block;
+	font-family: $primary-font;
+	color:$tertiary-color200;
+	letter-spacing: -1px;
+	margin-bottom: 12px;
+
+	@include max-mq($lg){
+		font-size: 15px;
+	}
+}
+
+.subtitle{
+	text-align: center;
+	font-family: $secondary-font;
+	color:$quarterly-color300;
+	line-height: 25px;
+
+	@include max-mq($lg){
+		font-size: 14px;
+		line-height: 22px;
+    	padding-top: 6px;
+	}
+
+	@include max-mq($tb){
+		font-size: 12px;
+		line-height: 19px;
+    	padding-top: 9px;
+	}
+}
+
+.services-subtitle{
+	width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+
+    @include max-mq($lg){
+		max-width: 390px;
+	}
+
+	@include max-mq($tb){
+		max-width: 230px;
+	}
+}
+
+.service-option-heading-title{ //h3 title
+	font-size: 18px;
+	font-weight:bold;
+	font-family: $primary-font;
+	
+	@include max-mq($tb){
+		font-size: 16px;
+	}
+}
+
+

@@ -1,0 +1,88 @@
+.hero-main{
+	background: url(../images/hero-image.png);
+    background-color:$secondary-color500;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size:39%;
+    width: 1440px;
+    height: 1440px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: -92%;
+    right: -38%;
+    z-index: -2;
+
+    @include max-mq($lg){
+        background-size: 45%;
+        width: 980px;
+        height: 980px;
+        top: -52%;
+        right: -31%;
+    }
+
+    @include max-mq(930px){
+        right: -38%;
+    }
+
+    @include max-mq(800px){
+        right: -52%;
+    }
+
+    @include max-mq($tb){
+        right: -52%;
+        background-size: 38%;
+        top: -83%;
+        background-position: 72% bottom;
+
+        &:before{
+            content:"";
+            display:block;
+            padding-top:100%;
+            background-color: $secondary-color500;
+            opacity: 0.9;
+        }
+    }
+
+    @include max-mq(400px){
+        right: -80%;
+    }
+}
+
+.hero-section-content-wrapper{
+	width: 35%;
+    height: 778px;
+    margin-top: 50px;
+    margin-left: 87px;
+    margin-bottom: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include max-mq($lg){
+        width: 58%;
+        height: 642px;
+        margin-left: 8px;
+    }
+
+    @include max-mq($tb){
+        width: 85%;
+        height: 535px;
+        margin-left: 6px;
+    }
+    
+	p{
+		padding: 33px 0;
+    	line-height: 29px;
+		font-family: $secondary-font;
+
+        @include max-mq($lg){
+            padding: 15px 0;
+        }
+
+        @include max-mq($tb){
+            font-size: 14px;
+            line-height: 22px;
+        }
+	}
+}

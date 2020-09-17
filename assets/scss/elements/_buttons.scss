@@ -1,0 +1,102 @@
+button, .primary-button{
+    font-family: $secondary-font;
+    font-weight: bold;
+    border:none;
+    color: $white;
+    border-radius: 10px;
+    background-color: $primary-color100;
+    transition: 0.3s ease-in-out;
+
+    &:hover{
+        background-color: $primary-color200;
+        cursor: pointer;
+    }
+}
+
+.primary-button{
+    display: inline-block;
+    margin-top: 16px;
+    text-decoration: none;
+    padding: 17px 33px 20px;
+
+    @include max-mq($tb){
+        font-size: 14px;
+        margin-top: 24px;
+        padding: 12px 29px 12px;
+    }     
+}
+
+.log-in-button{
+    align-self: flex-end;
+    padding: 11px 25px;
+    font-size: 14px; 
+
+    @include max-mq($tb){
+        padding: 11px 17px;
+        font-size: 12px;
+        margin-bottom: 3px;
+    }      
+}
+
+.submit-form-button{
+	width: 100%;
+   	padding: 12px;
+    letter-spacing: 0.5px;
+
+    @include max-mq($tb){
+        width: 85%;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+.slider-button{
+    position:absolute;
+    display: block;
+    width:40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    filter: drop-shadow(2.5px 4.33px 7px rgba(0,0,0,0.18));
+
+    @include max-mq($tb){
+        width:30px;
+        height: 30px;
+    }
+}
+
+.slider-button-next{
+    top:25%;
+    right: 2.5%;
+
+    @include max-mq($md){
+        right: 0%;
+    }
+
+    @include max-mq($tb){
+        right: 37.5%;
+        top: 100%;
+    }
+
+    img{
+        transform:rotate(270deg);
+    }
+}
+
+.slider-button-prev{
+    top: 25%;
+    left: 2%;
+
+    @include max-mq($md){
+        left: 0%;
+    }
+    
+    @include max-mq($tb){
+        left: 37.5%;
+        top: 100%;
+    }
+    
+    img{
+        transform:rotate(90deg);
+    }
+}

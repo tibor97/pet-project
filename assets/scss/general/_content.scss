@@ -1,0 +1,24 @@
+.main-container{
+	width:100%;
+	max-width:1210px;
+	margin: 0px auto;
+	padding: 0px 15px;
+}
+
+.about-section-main-container{
+	@include max-mq($tb){
+		padding: 0px 0px;
+	}
+}
+
+.row{
+	width:100%;
+	display: flex;
+	flex-wrap:wrap;
+}
+
+section{
+	overflow: hidden;
+	position: relative;
+}
+
